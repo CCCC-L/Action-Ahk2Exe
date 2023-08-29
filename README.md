@@ -8,7 +8,7 @@ Reference to https://github.com/nekocodeX/GitHub-Action-Ahk2Exe/tree/main
 |:-----|:-----|:-----|:-----|
 |in|String|True|The path and name of the script to compile|
 |out|String |False|The path\name of the output .exe to be created|
-|base|Number |False|compile bit number 32|64|
+|base|Number |False|compile bit number 32\|64, default 64|
 
 # Example usage
 ```yml
