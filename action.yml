@@ -56,5 +56,5 @@ runs:
         echo $command
 
 branding:
-  color: anchor
-  icon: terminal
+  color: gray-dark
+  icon: anchor
