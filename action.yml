@@ -22,7 +22,7 @@ runs:
       run: |
         $wd = (Get-Item .).FullName
         # 下载AHK主程序
-        Invoke-WebRequest "https://www.autohotkey.com/download/ahk-v2.zip" -OutFile "$wd\autohotkey.zip";
+        Invoke-WebRequest (Invoke-RestMethod https://api.github.com/repos/AutoHotkey/AutoHotkey/releases/latest).assets[0].browser_download_url -OutFile "$wd\autohotkey.zip";
         # 下载AHK2Exe
         $response = Invoke-RestMethod "https://api.github.com/repos/AutoHotkey/Ahk2Exe/releases/latest"
         foreach ($asset in $response[0].assets) {
